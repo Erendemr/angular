@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="http://localhost:4200/login">
+      Film Dünyası
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4200">Ana Sayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="showInfo = !showInfo">Bilgilerim</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4200/login">Giriş yapmak için tıklayın</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div id="container">
+    <h1>Merhaba, ben Murat Eren Demir</h1>
+    <p>Ufak bir angular ödev projesi yaptım..</p>
+    <button routerLink="/login">Kullanıcı Girişi</button>
+  </div>
+  
+  <div *ngIf="showInfo" class="contact-form bottom-left">
+    <h2>Bilgilerim</h2>
+    <p>Ad Soyad: Murat Eren Demir</p>
+    <p>Öğrenci no:23380101042</p>
+    <p>E-posta: erendemir0209hotmail.com</p>
+  </div>
+
+  <div *ngIf="showLogInfo" class="contact-form1 bottom-left">
+    <h2>Aşağıdaki bilgilerle giriş yapın</h2>
+    <p>kullanıcı adı: murat</p>
+    <p>şifre: abc</p>
+    <p>xyz kullanıcı adıylada giriş yapabilirsiniz</p>
+  </div>
+  
+  <div class="contact-button">
+    <button (click)="toggleInfo()">Bilgilerim</button>
+  </div>
+  
+  <div class="contact-button1">
+    <button (click)="LogInfo()">Şifre</button>
+  </div>
+
+  <div id="container2">
+       <p>Devam edebilmek için şifre kısmını okumalısın</p>
+
+  </div>

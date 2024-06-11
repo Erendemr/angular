@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="http://localhost:4200/login">
+    Film Dünyası
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:4200">Ana Sayfa</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="movies-container">
+  <h1>Film ve Tv şovları</h1>
+  <h2>Kategori seçin</h2>
+    <div class="select-wrapper">
+      <select [(ngModel)]="selectedOption" (change)="onSelectOption($event)">
+        <option value="war">Savaş</option>
+        <option value="comedy">Komedi</option>
+        <option value="drama">Drama</option>
+        <option value="action">Aksiyon</option>
+        <option value="horror">Korku</option>
+        <option value="romantic">Romantik</option>
+      </select>
+    </div>
+    
+    <ul class="movies-list">
+      <li *ngFor="let movie of movies" class="movie-item">
+        {{ movie.name }}
+      </li>
+    </ul>
+  </div>
